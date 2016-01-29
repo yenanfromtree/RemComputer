@@ -1,0 +1,54 @@
+<!-- code by 叶川川 -->    	
+<!doctype html> 
+<html> 
+<head> 
+    <meta charset="utf-8"> 
+    <meta name="description" content="网页描述" />
+    <meta name="Keywords" content="关键字" />
+	<meta name="viewport" content="width=device-width,initail-sacle=1.0,user-scalable=no" />
+	<style>
+		*{margin:0;padding:0; list-style:none;}
+		html{font-size:20px;}
+		body{background: #f96;background: url(./images/bg.jpg)no-repeat;background-size: 100%;}
+		h1{width: 100%;height: 2.5rem;line-height: 2.5rem;text-align: center;font-size: 1.5rem;text-shadow: 0 0 40px #fff;}
+		p{width: 14.9rem;height: 3.125rem;font-size: 1.5rem;margin:0 auto; }
+		.txt{width: 100%;height: 2.5rem;border: 5px solid #000;font-size: 1.5rem;text-indent: 0.5rem;}
+		b{font-size: 0.8em;}
+		.eb{width: 10.198rem;height: 2.5rem;border: 5px solid #000;font-size: 1.5rem;text-indent: 0.5rem;}
+		.sb{width: 10.198rem;height: 2.5rem;border: 5px solid #000;font-size: 1.5rem;text-indent: 0.5rem;}
+
+
+
+	</style>
+	<script>
+		window.onload=window.onresize=function(){
+			document.documentElement.style.fontSize=document.documentElement.clientWidth*20/320+'px';
+			var otxt=document.getElementById('txt');
+			var oeb=document.getElementById('eb');
+			var osb=document.getElementById('sb');
+			otxt.oninput=function(){
+				oeb.value=(otxt.value/2)/20;
+				osb.value=(otxt.value/3)/20;
+			}
+			otxt.onclick=function(){
+				otxt.value='';
+				oeb.value='';
+				osb.value='';
+			}
+
+		};
+	</script>
+</head>
+<body>
+    <div class="box">
+
+    	<h1>请输入像素值</h1>
+    	<p>
+    		<input type="text" class="txt" id="txt">
+    	</p>
+    	<p><b>二倍图</b><input type="text" class="eb" id="eb"></p>
+    	<p><b>三倍图</b><input type="text" class="sb" id="sb"></p>
+    	
+    </div>
+</body>
+</html>
